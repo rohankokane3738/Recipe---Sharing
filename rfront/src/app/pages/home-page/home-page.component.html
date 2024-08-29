@@ -1,0 +1,32 @@
+
+<div class="pb-10">
+
+    <div class="flex justify-center flex-wrap gap-10">
+        @for(item of recipes; track 1) {
+            <app-recipe-card  [recipe]="item"/>
+        }
+        @empty{
+            <div>
+                No Recipe Exist
+            </div>
+        }
+    
+     
+        
+    </div>
+
+    <div>
+
+<div class="fixed bottom-10 right-10">
+
+    <div class="example-button-container">
+        <button (click)="handleOpenCreateRecipeForm()" mat-fab color="primary" aria-label="Example icon button with a  icon">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+
+</div>
+
+    </div>
+
+</div>
